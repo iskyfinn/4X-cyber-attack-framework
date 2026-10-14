@@ -109,19 +109,39 @@ The four labels compress distinct behaviors and are not mutually exclusive. Most
 
 Portfolio focus: security architecture, application trust boundaries, adversary modeling, and evidence-driven defensive engineering.
 
-## 7. References
+## 7. References and Foundational Research
 
-Primary documentation and vulnerability records reviewed for this revision. Consult current product documentation before implementation.
+References 1–8 support the technical discussion. References 9–12 provide additional conceptual background. Reference 13 identifies the author’s framework and repository. Consult current product documentation before implementation.
 
-1. MITRE. *ATT&CK: Design and Philosophy* (March 2020). https://attack.mitre.org/docs/ATTACK_Design_and_Philosophy_March_2020.pdf
-2. Microsoft. *Process Security and Access Rights*. https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights
-3. CVE-2023-32784 record, GitHub Advisory Database. https://github.com/advisories/GHSA-f4c7-5p8v-p7jh
-4. NIST National Vulnerability Database. *CVE-2023-24055*. https://nvd.nist.gov/vuln/detail/CVE-2023-24055
-5. KeePass. *Security Issues: Write Access to Configuration File*. https://keepass.info/help/kb/sec_issues.html
-6. KeePass. *Enforced Configuration*. https://keepass.info/help/kb/config_enf.html
-7. Microsoft. *How Credential Guard Works*, including protection limits. https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/how-it-works
-8. Microsoft Sysinternals. *Sysmon*. https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+1. MITRE. (2020). MITRE ATT&CK: Design and Philosophy. March 2020 revision.
+    https://attack.mitre.org/docs/ATTACK_Design_and_Philosophy_March_2020.pdf
+2. Microsoft. Process Security and Access Rights. Microsoft Learn.
+    https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights
+3. GitHub Advisory Database. CVE-2023-32784: KeePass master-password recovery from memory dumps in versions before 2.54.
+    https://github.com/advisories/GHSA-f4c7-5p8v-p7jh
+4. National Institute of Standards and Technology. CVE-2023-24055. National Vulnerability Database. This record concerns configuration-based export abuse and includes the vendor’s dispute.
+    https://nvd.nist.gov/vuln/detail/CVE-2023-24055
+5. KeePass. Security Issues: Write Access to Configuration File. Vendor explanation of the security implications of configuration write access.
+    https://keepass.info/help/kb/sec_issues.html
+6. KeePass. Enforced Configuration. Documentation for enforcing supported application settings.
+    https://keepass.info/help/kb/config_enf.html
+7. Microsoft. How Credential Guard Works. Microsoft Learn. Describes Credential Guard architecture and its protection scope and limitations.
+    https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/how-it-works
+8. Microsoft Sysinternals. Sysmon. Documentation for endpoint telemetry, including ProcessAccess (Event ID 10), FileCreate (Event ID 11), and RegistryEvent value changes (Event ID 13).
+    https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+9. Emrich, A. (1993). MicroProse’s Master of Orion: A Stealth Star Is Born. Computer Gaming World, issue 110, p. 92. Historical source for the strategy-game terminology “eXplore, eXpand, eXploit, eXterminate.” This terminology provides a naming analogy; it does not establish a cybersecurity model.
+    https://archive.org/details/Computer_Gaming_World_Issue_110
+10. Hutchins, E. M., Cloppert, M. J., & Amin, R. M. (2011). Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains. Lockheed Martin Corporation.
+    https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf
+11. Boyd, J. R. (1996). The Essence of Winning and Losing. January 1996 briefing; September 2012 edition edited by Chet Richards and Chuck Spinney. Conceptual background for observation, orientation, decision, action, and feedback.
+    https://ooda.de/media/john_boyd_-_the_essence_of_winning_and_losing.pdf
+12. MITRE. MITRE ATT&CK Enterprise Matrix. Maintained knowledge base of adversary tactics and techniques. Record the ATT&CK version used when documenting technique mappings.
+    https://attack.mitre.org/matrices/enterprise/
+13. Finn, A. (2026). The 4X Cyber Attack Framework: Modeling Autonomous Adversary Loops. Technical white paper, Revision 1.1, October 13, 2026. Repository licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+    https://github.com/iskyfinn/4X-cyber-attack-framework
 
-## Revision Notes
+Revision Notes
 
-Revision 1.1 preserves eX naming; positions 4X as complementary to ATT&CK; defines proposed state records and transitions; corrects privilege and credential-protection claims; qualifies historical KeePass examples; and adds validation design and references. No empirical results are claimed.
+Revision 1.1 preserves the eX naming convention: eXplore, eXpand, eXploit, and eXfiltrate. It positions 4X as complementary to MITRE ATT&CK, defines proposed state records and transitions, clarifies privilege and credential-protection boundaries, qualifies historical KeePass examples, and adds an illustrative validation design and supporting references.
+
+The framework remains a conceptual proposal. No completed experiments, detection-performance measurements, or empirical validation results are reported.
